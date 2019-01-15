@@ -49,11 +49,11 @@ class Rental
   end
 
   def duration_price
-    price = case duration
+    case duration
       when 1 then @car.price_per_day
       when 2..4 then @car.price_per_day + @car.price_per_day * (duration - 1) * 90 / 100
       when 5..10 then @car.price_per_day + @car.price_per_day * 3 * 90 / 100 + @car.price_per_day * (duration - 4) * 70 / 100
-      else @car.price_per_day + @car.price_per_day * 4 * 90 / 100 + @car.price_per_day * 6 * 70 / 100 + @car.price_per_day * (duration - 10) * 50 / 100
+      else @car.price_per_day + @car.price_per_day * 3 * 90 / 100 + @car.price_per_day * 6 * 70 / 100 + @car.price_per_day * (duration - 10) * 50 / 100
     end
   end
 

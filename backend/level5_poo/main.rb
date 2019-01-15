@@ -1,6 +1,8 @@
 require 'json'
 require "./models.rb"
 
+### CREATE A JSON FILE WITH RENTALS' ACTIONS FROM ANOTHER JSON FILE
+
 # Import input
 data_hash = JSON.parse(File.read('data/input.json'))
 
